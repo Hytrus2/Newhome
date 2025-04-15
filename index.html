@@ -356,17 +356,25 @@ section {
         <p>Wypełnij formularz kontaktowy:</p>
         <form action="https://formspree.io/f/myzevaob" method="POST">
             <label>
-                Twój adres e-mail:
+                Imię i nazwisko:
+                <input type="text" name="name" placeholder="Imię i nazwisko" required>
+            </label>
+            <label>
+                Adres e-mail:
                 <input type="email" name="email" placeholder="Adres e-mail" required>
+            </label>
+            <label>
+                Numer telefonu:
+                <input type="tel" name="phone" placeholder="Numer telefonu">
             </label>
             <label>
                 Wiadomość:
                 <textarea name="message" placeholder="Wiadomość" required></textarea>
             </label>
-            <label>
-                Imię i nazwisko:
-                <input type="text" name="name" placeholder="Imię i nazwisko" required>
-            </label>
+        
+            
+            <input type="hidden" name="_captcha" value="false">
+        
             <button type="submit">Wyślij</button>
         </form>
     </section>
