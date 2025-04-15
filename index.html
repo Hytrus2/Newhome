@@ -132,59 +132,43 @@
 
 
 .services div { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-section{
-    scroll-margin-top: 70px;}
-    
-    
-
-    
-    .language-switcher img {
-        width: 24px;
-        height: 16px;
-        cursor: pointer;
-        transition: transform 0.3s;
-    }
-
-    .language-switcher img:hover {
-        transform: scale(1.2);
-    }
-</style>
+section {
+    scroll-margin-top: 70px; /* Dopasuj do wysokości nawigacji */
+}
 
 
     </style>
 </head>
+
 <body>
     <header>
         <h1>A&A NEW HOME</h1>
     </header>
     
     <nav>
-        <a href="#about">About Us</a>
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-        <div class="language-switcher">
-            <a href="?lang=pl"><img src="https://upload.wikimedia.org/wikipedia/en/1/12/Flag_of_Poland.svg" alt="Polish" title="Polski"></a>
-            <a href="?lang=en"><img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="English" title="English"></a>
-        </div>
+        <a href="#about">O nas</a>
+        <a href="#services">Usługi</a>
+        <a href="#gallery">Galeria</a>
+        <a href="#contact">Kontakt</a>
     </nav>
     
+    
     <section id="about">
-        <h2>About Us</h2>
-        <p>Our company offers comprehensive renovations and interior finishing, providing the highest quality of services.</p>
+        <h2>O nas</h2>
+        <p>Nasza firma oferuje kompleksowe remonty i wykończenia wnętrz, zapewniając najwyższą jakość usług.</p>
     </section>
     
     <section id="services">
-        <h2>Our Services</h2>
+        <h2>Nasze Usługi</h2>
         <div class="services">
-            <div>Painting and Wallpapering</div>
-            <div>Tiling</div>
-            <div>Interior Finishing</div>
+            <div>Malowanie i tapetowanie</div>
+            <div>Układanie płytek</div>
+            <div>Wykończenia wnętrz</div>
         </div>
     </section>
     
     <section id="gallery" class="gallery">
-        <h2>Gallery of Completed Work</h2>
+        <h2>Galeria Zrealizowanych Prac</h2>
         <div class="gallery">
             <a href="#img1"><img src="https://i.imgur.com/QGQUrhl.jpg" alt="Zdjęcie 1"></a>
             <a href="#img2"><img src="https://i.imgur.com/YTOY6cT.jpg" alt="Zdjęcie 2"></a>
@@ -366,99 +350,21 @@ section{
     </div>  
     
     <section id="contact">
-        <h2>Contact</h2>
-        <p>Get in touch with us: newhomemazowsze@gmail.com</p>
-        <p>Phone: 787 399 302</p>
-        <p>Fill out the contact form:</p>
+        <h2>Kontakt &#128382;</h2>
+        <p>Skontaktuj się z nami: NEWHOME@gmail.com</p>
+        <p>Telefon: 787 399 302</p>
+        <p>Wypełnij formularz kontaktowy:</p>
         <form action="#" method="post">
-            <input type="text" name="name" placeholder="Full Name" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <textarea name="message" rows="5" placeholder="Message" required></textarea>
-            <button type="submit">Send</button>
+            <input type="text" name="name" placeholder="Imię i nazwisko" required>
+            <input type="email" name="email" placeholder="Adres e-mail" required>
+            <textarea name="message" rows="5" placeholder="Wiadomość" required></textarea>
+            <button type="submit">Wyślij</button>
         </form>
     </section>
+    
 
     <footer>
-        <p>&copy; 2025 A&A NEW HOME - All rights reserved</p>
+        <p>&copy; 2025 A&A NEW HOME - Wszelkie prawa zastrzeżone</p>
     </footer>
-    <script>
-        
-        const lang = new URLSearchParams(window.location.search).get('lang') || 'pl';
-    
-        
-        const translations = {
-            pl: {
-                about: 'O nas',
-                aboutText: 'Nasza firma oferuje kompleksowe remonty i wykończenia wnętrz, zapewniając najwyższą jakość usług.',
-                services: 'Nasze Usługi',
-                contact: 'Kontakt',
-                contactText: 'Skontaktuj się z nami: newhomemazowsze@gmail.com',
-                phone: 'Telefon: +48 787 399 302',
-                contactForm: 'Wypełnij formularz kontaktowy:',
-                namePlaceholder: 'Imię i nazwisko',
-                emailPlaceholder: 'Adres e-mail',
-                messagePlaceholder: 'Wiadomość',
-                sendButton: 'Wyślij',
-                gallery: 'Galeria Zrealizowanych Prac',
-                title: 'A&A NOWY DOM - Profesjonalne Usługi Remontowe',
-                serviceItems: ['Malowanie i Tapetowanie', 'Układanie Płytek', 'Wykończenia Wnętrz']
-            },
-            en: {
-                about: 'About Us',
-                aboutText: 'Our company offers comprehensive renovations and interior finishing, providing the highest quality of services.',
-                services: 'Our Services',
-                contact: 'Contact',
-                contactText: 'Get in touch with us: newhomemazowsze@gmail.com',
-                phone: 'Phone: +48 787 399 302',
-                contactForm: 'Fill out the contact form:',
-                namePlaceholder: 'Full Name',
-                emailPlaceholder: 'Email',
-                messagePlaceholder: 'Message',
-                sendButton: 'Send',
-                gallery: 'Gallery of Completed Work',
-                title: 'A&A NEW HOME - Professional Renovation Services',
-                serviceItems: ['Painting and Wallpapering', 'Tiling', 'Interior Finishing']
-            }
-        };
-    
-        
-        function updateContent(language) {
-            const t = translations[language];
-    
-            
-            document.title = t.title;
-    
-            
-            document.querySelector('#about h2').textContent = t.about;
-            document.querySelector('#about p').textContent = t.aboutText;
-            document.querySelector('#services h2').textContent = t.services;
-            document.querySelector('#gallery h2').textContent = t.gallery;
-    
-            
-            const serviceItems = document.querySelectorAll('.services div');
-            serviceItems.forEach((item, index) => {
-                item.textContent = t.serviceItems[index];
-            });
-    
-            
-            document.querySelector('#contact h2').textContent = t.contact;
-            const contactParagraphs = document.querySelectorAll('#contact p');
-            contactParagraphs[0].textContent = t.contactText;
-            contactParagraphs[1].textContent = t.phone;
-            contactParagraphs[2].textContent = t.contactForm;
-    
-            
-            const contactForm = document.querySelector('#contact form');
-            contactForm.querySelector('input[name="name"]').placeholder = t.namePlaceholder;
-            contactForm.querySelector('input[name="email"]').placeholder = t.emailPlaceholder;
-            contactForm.querySelector('textarea[name="message"]').placeholder = t.messagePlaceholder;
-    
-            
-            contactForm.querySelector('button').textContent = t.sendButton;
-        }
-    
-        
-        updateContent(lang);
-    </script>
 </body>
 </html>
