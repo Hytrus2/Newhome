@@ -354,10 +354,19 @@ section {
         <p>Skontaktuj się z nami: newhomemazowsze@gmail.com</p>
         <p>Telefon: 787 399 302</p>
         <p>Wypełnij formularz kontaktowy:</p>
-        <form action="#" method="post">
-            <input type="text" name="name" placeholder="Imię i nazwisko" required>
-            <input type="email" name="email" placeholder="Adres e-mail" required>
-            <textarea name="message" rows="5" placeholder="Wiadomość" required></textarea>
+        <form action="https://formspree.io/f/myzevaob" method="POST">
+            <label>
+                Twój adres e-mail:
+                <input type="email" name="email" placeholder="Adres e-mail" required>
+            </label>
+            <label>
+                Wiadomość:
+                <textarea name="message" placeholder="Wiadomość" required></textarea>
+            </label>
+            <label>
+                Imię i nazwisko:
+                <input type="text" name="name" placeholder="Imię i nazwisko" required>
+            </label>
             <button type="submit">Wyślij</button>
         </form>
     </section>
